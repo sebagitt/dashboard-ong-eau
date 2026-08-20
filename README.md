@@ -15,8 +15,9 @@ Face à l'urgence sanitaire liée au manque d'hygiène et d'infrastructures (WAS
 - Intégration d'un indice de "Stabilité Politique" pour l'évaluation des risques opérationnels.
 - Conformité de l'interface aux normes d'accessibilité (contraste, colorimétrie inclusive).
 
-<td align="center"><img src="img/page1_monde_dwfa.png" width="350" alt="Aperçu du Dashboard"></td>
-
+<p align="center">
+  <img src="img/page1_monde_dwfa.png" width="600" alt="Aperçu du Dashboard">
+</p>
 
 ## Architecture et Modèle de Données
 
