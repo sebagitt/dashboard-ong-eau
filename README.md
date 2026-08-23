@@ -2,12 +2,12 @@
 
 Ce projet est un outil de pilotage d'aide à la décision développée pour une ONG internationale (DWFA). Son objectif est de transformer des données mondiales hétérogènes en une stratégie d'intervention actionnable sur le terrain.
 
-**Stack Technique** : Power BI | Power Query (M) | DAX | UX/UI Design (Figma)
+**Stack Technique** : `Power BI` | `Power Query (M)` | `DAX` | `UX/UI Design`
 
 
 ## Vue d'ensemble & contexte métier
 
-Face à l'urgence sanitaire liée au manque d'hygiène et d'infrastructures (WASH), l'ONG DWFA devait optimiser l'allocation de ses ressources matérielles et humaines. La question n'était plus *comment* agir, mais *où* agir en priorité, tout en garantissant la sécurité des équipes.
+Face à l'urgence sanitaire liée au manque d'hygiène et d'infrastructures (WASH), l'ONG DWFA doit optimiser l'allocation de ses ressources matérielles et humaines. La question n'est plus *comment* agir, mais *où* agir en priorité, tout en garantissant la sécurité des équipes.
 
 **Résultats et livrables :**
 - Couverture analytique mondiale intégrant les données de l'OMS et de la FAO (historique 2000-2017).
@@ -35,7 +35,7 @@ Dim_Year    ─────────(1:N)──────▶ Fact_Mortality
 ```
 
 ## Métriques clés (DAX)
-Privilégiant les mesures dynamiques aux colonnes calculées, le projet exploite la modification de contextes (CALCULATE, REMOVEFILTERS) pour générer des benchmarks à la volée.
+Privilégiant les mesures dynamiques aux colonnes calculées, le projet exploite la modification de contextes (`CALCULATE`, `REMOVEFILTERS`) pour générer des benchmarks à la volée.
 
 Extrait de code
 ```
@@ -51,7 +51,7 @@ CALCULATE(
 ```
 
 ## Approche UX & Accessibilité
-- L'interface a été conçue via un Blueprint en amont pour minimiser la charge cognitive des décideurs :
+L'interface a été conçue via un Blueprint en amont pour minimiser la charge cognitive des décideurs :
 
 - Architecture en entonnoir : Parcours strictement guidé : Monde (Macro) → Continent (Ciblage) → Pays (Audit opérationnel).
 
@@ -90,13 +90,12 @@ CALCULATE(
 - Clonez ce dépôt sur votre machine locale.
 
 - Ouvrez le fichier 01_dashboard_pilotage_dwfa.pbix avec Power BI Desktop.
-
-Note : Les données étant importées, le modèle est consultable immédiatement. 
-Pour rafraîchir les données, modifiez le chemin source dans les paramètres de la source de données Power Query pour pointer vers votre dossier /data local.
+*Note : Les données étant importées, le modèle est consultable immédiatement. 
+Pour rafraîchir les données, modifiez le chemin source dans les paramètres de la source de données Power Query pour pointer vers votre dossier /data local.*
 
 
 ## Axes d'amélioration
-Dans une démarche d'amélioration continue, voici les évolutions prévues pour la V2 de ce produit :
+Dans une démarche d'amélioration continue, voici les évolutions de ce produit qui peuvent être réalisées  :
 
 - Optimisation du Modèle : Le modèle actuel s'apparente à une "constellation" (plusieurs tables de faits partageant les mêmes dimensions). L'objectif technique est de consolider ces faits en une table unique via Power Query (Unpivot/Append) pour un schéma en Étoile pur, maximisant la compression du moteur VertiPaq.
 
